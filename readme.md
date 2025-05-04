@@ -1,5 +1,7 @@
 # Country Explorer
 
+## Live Preview:https://country-explore-blond.vercel.app/
+
 A modern web application for exploring countries around the world, their details, and geographical locations.
 
 ## Features
