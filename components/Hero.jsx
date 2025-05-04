@@ -10,7 +10,7 @@ const Hero = () => {
             <Globe className="h-16 w-16 text-white" />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-            Explore Our World
+            Explore Our Worlds
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-xl text-blue-100">
             Discover detailed information about countries around the globe. From populations to languages, flags to
