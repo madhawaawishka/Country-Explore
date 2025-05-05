@@ -1,9 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
+import dynamic from 'next/dynamic'
 import Hero from "./Hero"
 import CountryFilter from "./CountryFilter"
 import CountryGrid from "./CountryGrid"
+
+// Import Globe dynamically with SSR disabled
+const Globe = dynamic(() => import('react-globe.gl').then(mod => mod.default), {
+  ssr: false,
+  loading: () => <div className="h-64 w-full bg-gray-100 flex items-center justify-center">Loading globe...</div>
+})
 
 const HomePage = () => {
   const [countries, setCountries] = useState([])
@@ -15,7 +22,6 @@ const HomePage = () => {
     region: "",
     language: "",
   })
-
   useEffect(() => {
     const fetchCountries = async () => {
       try {
@@ -74,8 +80,30 @@ const HomePage = () => {
   }
 
   return (
-    <div>
-      <Hero />
+      <div>
+      {/* Hero Section with Globe */}
+      <section className="relative w-full h-[50vh] overflow-hidden">
+        <Suspense fallback={<div className="h-full w-full bg-gray-100 flex items-center justify-center">Loading globe...</div>}>
+          <Globe
+            globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+            backgroundColor="rgba(0,0,0,1)"
+            width={window.innerWidth}
+            height={window.innerHeight / 2}
+            showAtmosphere={true}
+          />
+        </Suspense>
+
+   
+          <div className="absolute top-0 left-0 right-0 p-8 text-center pointer-events-none">
+          <h1 className="text-4xl font-bold text-white drop-shadow-lg mb-3">Explore The World</h1>
+          <p className="text-xl text-white drop-shadow-md max-w-2xl mx-auto bg-black/30 p-3 rounded-lg">
+          Discover detailed information about countries around the globe. From populations to languages, flags to
+          capitals - your journey starts here.
+          </p>
+        </div>
+      </section>
+      
+
       <CountryFilter onFilterChange={handleFilterChange} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <CountryGrid countries={filteredCountries} loading={loading} error={error} />
