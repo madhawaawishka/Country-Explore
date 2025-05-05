@@ -55,6 +55,8 @@
     "react": "^19",
     "react-day-picker": "8.10.1",
     "react-dom": "^19",
+    "react-globe": "^5.0.2",
+    "react-globe.gl": "^2.33.2",
     "react-hook-form": "^7.54.1",
     "react-leaflet": "latest",
     "react-resizable-panels": "^2.1.7",
@@ -63,6 +65,7 @@
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
+    "three": "^0.176.0",
     "vaul": "^0.9.6",
     "zod": "^3.24.1"
   },
