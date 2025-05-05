@@ -25,73 +25,58 @@ A modern web application for exploring countries around the world, their details
 ### Prerequisites
 
 - Node.js 16.x or higher
-- npm or yarn package manager
+- npm package manager
 
 ### Installation
 
 1. Clone the repository:
-   bash
-   git clone https://github.com/yourusername/country-explorer.git
+   ```bash
    cd country-explorer
-   
+   ```
 
 2. Install the dependencies:
-   bash
+   ```bash
    npm install
-   # or
-   yarn install
-   
+   ```
 
 3. Run the development server:
-   bash
+   ```bash
    npm run dev
-   # or
-   yarn dev
-   
+   ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### Building for Production
 
-bash
+```bash
 npm run build
-# or
-yarn build
-
+```
 
 To start the production server:
-bash
+```bash
 npm run start
-# or
-yarn start
-
+```
 
 ## Testing
 
 Run the test suite:
-bash
+```bash
 npm test
-# or
-yarn test
-
+```
 
 For test coverage:
-bash
+```bash
 npm run test:coverage
-# or
-yarn test:coverage
-
+```
 
 For watching mode during development:
-bash
+```bash
 npm run test:watch
-# or
-yarn test:watch
-
+```
 
 ## Project Structure
 
-
+```
 country-explorer/
 ├── components/         # React components
 ├── contexts/           # React context providers
@@ -100,7 +85,7 @@ country-explorer/
 ├── styles/             # Global styles
 ├── __tests__/          # Test files
 └── ...configuration files
-
+```
 
 ## Contributing
 
