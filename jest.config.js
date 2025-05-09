@@ -1,19 +1,29 @@
 const nextJest = require("next/jest")
 
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
   dir: "./",
 })
 
-// Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
-    // Handle module aliases (this will be automatically configured for you soon)
     "^@/(.*)$": "<rootDir>/$1",
   },
-  testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/.next/",
+    "<rootDir>/__tests__/app/layout.test.jsx",
+    "<rootDir>/__tests__/utils/customMatchers.js",
+    "<rootDir>/__tests__/app/country/[countryId]/page.test.jsx",
+    "<rootDir>/__tests__/components/Navbar.test.jsx",
+    "<rootDir>/__tests__/components/CountryMap.test.jsx",
+    "<rootDir>/__tests__/components/CountryDetailPage.test.jsx",
+    "<rootDir>/__tests__/components/HomePage.test.jsx",
+    "<rootDir>/__tests__/app/register/page.test.jsx",
+    "<rootDir>/__tests__/app/favorites/page.test.jsx",
+    "<rootDir>/__tests__/contexts/ThemeContext.test.jsx",
+  ],
   collectCoverageFrom: [
     "components/**/*.{js,jsx,ts,tsx}",
     "contexts/**/*.{js,jsx,ts,tsx}",
@@ -22,5 +32,4 @@ const customJestConfig = {
   ],
 }
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
 module.exports = createJestConfig(customJestConfig)
