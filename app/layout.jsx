@@ -3,6 +3,8 @@ import { AuthProvider } from "@/contexts/AuthContext"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import "./globals.css"
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const metadata = {
   title: "Country Explorer",
@@ -20,6 +22,18 @@ export default function RootLayout({ children }) {
               <Navbar />
               <main className="flex-grow">{children}</main>
               <Footer />
+              <ToastContainer 
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="light"
+              />
             </div>
           </AuthProvider>
         </ThemeProvider>
