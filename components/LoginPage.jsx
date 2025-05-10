@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/contexts/AuthContext"
 import { LogIn, AlertCircle, Mail, Lock } from "lucide-react"
+import { toast } from "react-toastify"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("")
@@ -36,6 +37,7 @@ const LoginPage = () => {
 
       if (success) {
         router.push("/")
+        toast.success("Login successful! Welcome back.")
       } else {
         setError("Failed to log in")
       }
