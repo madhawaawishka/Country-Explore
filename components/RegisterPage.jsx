@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/contexts/AuthContext"
 import { UserPlus, AlertCircle, Mail, Lock, Check } from "lucide-react"
+import { toast } from "react-toastify"
 
 const RegisterPage = () => {
   const [email, setEmail] = useState("")
@@ -41,6 +42,7 @@ const RegisterPage = () => {
       })
 
       if (success) {
+        toast.success("Account created successfully! Welcome aboard.")
         router.push("/")
       } else {
         setError("Failed to create an account")
