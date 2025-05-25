@@ -21,7 +21,7 @@ const Hero = () => {
               href="#countries"
               className="px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10 transition duration-150 ease-in-out"
             >
-              Start Exploring
+              Start Explorings
             </a>
           </div>
         </div>
