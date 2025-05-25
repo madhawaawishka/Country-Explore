@@ -57,7 +57,7 @@ const LoginPage = () => {
             Welcome Back
           </h2>
           <p className="mt-3 text-center text-sm text-gray-600 dark:text-gray-400">
-            Sign in to continue exploring countries
+            Sign in to continue exploring countriess
           </p>
         </div>
 
