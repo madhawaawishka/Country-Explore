@@ -98,7 +98,7 @@ const HomePage = () => {
           <h1 className="text-4xl font-bold text-white drop-shadow-lg mb-3">Explore The World</h1>
           <p className="text-xl text-white drop-shadow-md max-w-2xl mx-auto bg-black/30 p-3 rounded-lg">
           Discover detailed information about countries around the globe. From populations to languages, flags to
-          capitals - your journey starts here.
+          capitals - your journey starts here.a
           </p>
         </div>
       </section>
