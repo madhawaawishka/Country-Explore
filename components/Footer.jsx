@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="/" className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400">
-                  Home
+                  Homea
                 </a>
               </li>
               <li>
